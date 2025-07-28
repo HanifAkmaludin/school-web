@@ -24,7 +24,7 @@ export default function Dashboard() {
           </p>
         </div>
         <button 
-          onClick={() => signOut({ callbackUrl: '/login' })}
+          onClick={() => signOut({ callbackUrl: '/signin' })}
           className="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
         >
           Sign Out
