@@ -17,6 +17,7 @@ export default function Page(){
     isShow: false
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState(false);
 
   const handleLogin = async () => {
     setIsLoading(true);
@@ -40,13 +41,34 @@ export default function Page(){
     }
   };
 
+  const handleGoogleLogin = async () => {
+    setIsLoadingGoogle(true);
+    const res = await signIn("google", {
+      callbackUrl: "/dashboard", // arahkan ke dashboard setelah login berhasil
+    });
+    console.log(res, "Google sign-in response");
+    if (res?.error) {
+      setAlert({
+        type: "error",
+        message: res.error,
+        isShow: true
+      });
+      setIsLoadingGoogle(false);
+    } else {
+      router.push("/dashboard"); // ganti ke halaman tujuanmu
+      setIsLoadingGoogle(false);
+    }
+  };
+
   return (
     <section className="h-screen flex items-center justify-center">
       <div className="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8">
-        <form className="space-y-6" action="#">
-            <h5 className="text-xl font-medium text-gray-900">Sign in to our platform</h5>
-            {alert.isShow && <BaseAlert alert={alert} />}
-            <div>
+        <form className="" action="#">
+            <h5 className="text-xl font-medium text-gray-900 mb-6">Sign in to our platform</h5>
+            <div className="mb-6">
+              {alert.isShow && <BaseAlert alert={alert} />}
+            </div>
+            <div className="mb-6">
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
                 <input
                   type="email"
@@ -59,7 +81,7 @@ export default function Page(){
                   required
                 />
             </div>
-            <div>
+            <div className="mb-6">
                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900">Your password</label>
                 <input
                   type="password"
@@ -80,6 +102,16 @@ export default function Page(){
             >
               { isLoading ? 'Loading' : 'Login to your account' }
               { isLoading && (<LoaderSpinner />) }
+            </button>
+            <span className="mt-2 text-center flex w-full mb-2 justify-center">or</span>
+            <button
+              type="button"
+              className="w-full text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center justify-center gap-3 cursor-pointer mb-6"
+              disabled={isLoadingGoogle}
+              onClick={handleGoogleLogin}
+            >
+              { isLoadingGoogle ? 'Loading' : 'Login to your account Google' }
+              { isLoadingGoogle && (<LoaderSpinner />) }
             </button>
             <div className="text-sm font-medium text-gray-500">
                 Not registered? <Link href="/signup" className="text-blue-700 hover:underline">Create account</Link>
