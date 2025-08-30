@@ -16,42 +16,19 @@ Website ini bertujuan untuk memberikan informasi mengenai sekolah, kegiatan, ber
 ---
 
 ## 🛠️ Teknologi yang Digunakan
-- **Frontend**
   - HTML, CSS, JavaScript
   - Next.js (React Framework)
   - Tailwind CSS
-- **Backend**
-  - PHP
-  - NextAuth (Authentication)
   - Prisma ORM
   - Node.js
-- **Database**
-  - MySQL / NeonDB (PostgreSQL-based)
-- **Tools**
+  - NeonDB (PostgreSQL-based)
   - TypeScript
   - ESLint
   - Nodemailer (Email)
   - Bcrypt (Enkripsi Password)
 
 ---
-
-## 📂 Struktur Folder
-
-├── public/ # Assets (gambar, icon, dsb)
-├── src/ # Source code utama
-│ ├── pages/ # Halaman Next.js
-│ ├── components/ # Komponen UI
-│ ├── styles/ # CSS/Tailwind
-│ ├── lib/ # Konfigurasi helper
-│ └── prisma/ # Schema database
-├── package.json # Dependencies project
-├── prisma/schema.prisma
-└── README.md
-
----
-
-## ⚡ Instalasi & Menjalankan Project
-1. Clone repository ini:
-   ```bash
-   git clone https://github.com/username/nama-project.git
-   cd nama-project
+## 📂 Lampiran
+  - Recording -> https://drive.google.com/file/d/1529VlD1Pl_m6E-Ogg40J6MmLtEOxxybE/view?usp=sharing
+  - Domain Website -> https://school-web-lilac-two.vercel.app/
+  - Screenshot -> https://drive.google.com/drive/folders/1fZWlcAv5CkBeN6gIip8u99hBrSUi_afP?usp=sharing
