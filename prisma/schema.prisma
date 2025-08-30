@@ -34,3 +34,21 @@ model otps {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  price       Float
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+}
+
+model contacts {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  email     String   @db.VarChar(150)
+  subject   String   @db.VarChar(200)
+  message   String
+  createdAt DateTime @default(now())
+}
