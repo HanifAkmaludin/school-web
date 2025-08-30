@@ -1,4 +1,5 @@
 import articles from "@/utils/contants/news";
+import Link from "next/link";
 
 export default async function DetailNews({
   slug,
@@ -12,13 +13,13 @@ export default async function DetailNews({
     return (
       <div className="max-w-3xl mx-auto mt-20 text-center text-gray-500">
         <h2 className="text-xl font-semibold">Artikel tidak ditemukan</h2>
-        <p className="mt-2">Silakan kembali ke halaman <a href="/news" className="text-blue-600 hover:underline">News</a>.</p>
+        <p className="mt-2">Silakan kembali ke halaman <Link href="/news" className="text-blue-600 hover:underline">News</Link>.</p>
       </div>
     );
   }
 
   return (
-    <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden mt-10">
+    <div className="max-w-3xl mx-auto bg-white rounded-2xl lg:shadow-sm lg:border lg:border-gray-200 overflow-hidden mt-10 mb-6">
       {/* Category */}
       <div className="px-6 pt-6 text-sm font-semibold text-gray-600">
         {article.category}

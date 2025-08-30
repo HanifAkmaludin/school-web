@@ -9,7 +9,6 @@ import BaseAlert from "@/components/base-alert";
 
 export default function Contact() {
   const [errors, setErrors] = useState<Partial<ContactFormData>>({});
-  // const [status, setStatus] = useState("");
   const [alert, setAlert] = useState({
     type: "",
     message: "",
@@ -17,6 +16,10 @@ export default function Contact() {
   });
   const [isLoading, setIsLoading] = useState(false);
 
+  /**
+   * Handle submit form
+   * @param {React.FormEvent<HTMLFormElement>} e - event dari form
+   */
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -29,7 +32,7 @@ export default function Contact() {
 
     // ✅ Validasi dengan Zod
     const result = contactSchema.safeParse(data);
-    console.log(result);
+
     if (!result.success) {
       // ambil error message per field
       const fieldErrors: Partial<ContactFormData> = {};
@@ -43,7 +46,7 @@ export default function Contact() {
 
     setErrors({});
     setIsLoading(true);
-    console.log(result);
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -52,7 +55,7 @@ export default function Contact() {
       });
 
       const resData = await res.json();
-      console.log(e);
+
       if(res.ok){
         setAlert({
           type: "success",

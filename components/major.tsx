@@ -43,7 +43,7 @@ export default function Major() {
       {/* Corporate Design */}
       <div className="grid md:grid-cols-2 items-center gap-10">
         {/* Content */}
-        <div>
+        <div className="order-2 md:order-1">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             TEKNIK KOMPUTER DAN JARINGAN
           </h2>
@@ -79,7 +79,7 @@ export default function Major() {
         </div>
 
         {/* Image */}
-        <div className="rounded-xl overflow-hidden shadow-lg">
+        <div className="rounded-xl overflow-hidden shadow-lg order-1 md:order-2">
           <img
             src="https://ppdb.itikurih-hibarna.sch.id/images/portfolio/lab-hardware.jpeg"
             alt="Corporate Design"

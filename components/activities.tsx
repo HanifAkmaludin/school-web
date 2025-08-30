@@ -4,7 +4,7 @@ import activities from "@/utils/contants/activities"
 export default function Page(){
   return(
     <section>
-      <div className="container mx-auto py-16">
+      <div className="container mx-auto py-16 px-6 lg:px-0">
         <div className="mb-6 text-center">
           {/* Badge */}
           <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
