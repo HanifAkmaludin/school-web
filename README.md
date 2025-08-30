@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 Website Sekolah - SMK Itikurih Hibarna
 
-## Getting Started
+Proyek ini dibuat sebagai bagian dari **Uji Kompetensi Sertifikasi BNSP Junior Web Programmer**, yang diselenggarakan oleh **Jabar Digital Academy** bekerjasama dengan **Alkademi** dan **Creativemu Academy**.
 
-First, run the development server:
+Website ini bertujuan untuk memberikan informasi mengenai sekolah, kegiatan, berita terbaru, dan menyediakan formulir kontak untuk memudahkan komunikasi dengan pihak sekolah.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Fitur Utama
+- **Beranda (Home)** → Menampilkan profil singkat sekolah.
+- **Tentang Kami (About Us)** → Informasi tentang visi, misi, dan sejarah sekolah.
+- **Kegiatan (Activities)** → Dokumentasi kegiatan sekolah.
+- **Berita (News)** → Update berita terbaru seputar sekolah.
+- **Kontak (Contact)** → Formulir kontak yang langsung terhubung ke backend (PHP/MySQL / NeonDB).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Teknologi yang Digunakan
+- **Frontend**
+  - HTML, CSS, JavaScript
+  - Next.js (React Framework)
+  - Tailwind CSS
+- **Backend**
+  - PHP
+  - NextAuth (Authentication)
+  - Prisma ORM
+  - Node.js
+- **Database**
+  - MySQL / NeonDB (PostgreSQL-based)
+- **Tools**
+  - TypeScript
+  - ESLint
+  - Nodemailer (Email)
+  - Bcrypt (Enkripsi Password)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Struktur Folder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+├── public/ # Assets (gambar, icon, dsb)
+├── src/ # Source code utama
+│ ├── pages/ # Halaman Next.js
+│ ├── components/ # Komponen UI
+│ ├── styles/ # CSS/Tailwind
+│ ├── lib/ # Konfigurasi helper
+│ └── prisma/ # Schema database
+├── package.json # Dependencies project
+├── prisma/schema.prisma
+└── README.md
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚡ Instalasi & Menjalankan Project
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/username/nama-project.git
+   cd nama-project
